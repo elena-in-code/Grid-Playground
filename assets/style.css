@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.container {
+	max-width: 100%;
+	/*grid*/
+	display: grid;
+	grid-template-columns: 10vw auto 10vw;
+	grid-template-rows: 20fr 5fr 5fr 5fr 5fr 5fr;
+	grid-gap: .1em;
+	grid-template-areas: 
+		"box1 box1 box1" 
+		". box2 ."
+		". box3 ."
+		". box4 ."
+		". box5 ."
+		". box6 .";
+}
+
+.container > div {
+	padding: 1.8em;
+}
+#header {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	grid-area: box1;
+	background-color: white;
+	border: 1px solid red;
+}
+.name {
+	font-size: 2em;
+}
+
+#intro {
+	grid-area: box2;
+	background-color: rgba(67, 77, 81, 0.3);
+
+}
+
+#technologies {
+	grid-area: box3;
+	background-color: rgba(252, 121, 40, 0.4);
+}
+
+#portfolio {
+	grid-area: box4;
+	background-color: rgba(252, 121, 40, 0.4);
+
+}
+
+#background {
+	grid-area: box5;
+	background-color: rgba(67, 77, 81, 0.3);
+
+}
+
+#contact {
+	grid-area: box6;
+	background-color: rgba(67, 77, 81, 0.7);
+}
+
